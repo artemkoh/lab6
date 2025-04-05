@@ -1,0 +1,28 @@
+import random
+
+def intersect_sets():
+    try:
+        # Генерація двох множин випадкових цілих чисел
+        set1 = set(random.sample(range(1, 20), 8))  # 8 унікальних чисел від 1 до 19
+        set2 = set(random.sample(range(10, 30), 8)) # інший діапазон для наочності
+
+        print("Множина 1:", set1)
+        print("Множина 2:", set2)
+
+        # Пошук спільних елементів
+        intersection = set1 & set2
+
+        # Перевірка, чи є перетин
+        if intersection:
+            print("Спільні елементи:", intersection)
+        else:
+            # Якщо немає перетину — перетворюємо на список і назад у множину (як вимагає умова)
+            result_list = list(set1) + list(set2)
+            result_set = set(result_list)
+            print("Спільних елементів немає. Об’єднана множина:", result_set)
+
+    except Exception as e:
+        print("Сталася помилка:", e)
+
+# Виклик функції
+intersect_sets()
