@@ -1,0 +1,15 @@
+def round_float_list():
+    # Введення списку дійсних чисел користувачем
+    input_str = input("Введіть числа через пробіл: ")
+    
+    # Перетворення введеного рядка у список дійсних чисел
+    float_list = list(map(float, input_str.split()))
+    
+    # Округлення кожного елемента до найближчого цілого
+    int_list = [round(num) for num in float_list]
+    
+    # Вивід результату
+    print("Список після округлення:", int_list)
+
+# Виклик функції
+round_float_list()
