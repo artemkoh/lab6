@@ -1,0 +1,16 @@
+def find_shortest_word():
+    # Введення списку слів користувачем
+    input_str = input("Введіть слова через пробіл: ")
+    
+    # Розбиття рядка на список слів
+    word_list = input_str.split()
+    
+    # Пошук найкоротшого слова
+    if word_list:
+        shortest_word = min(word_list, key=len)
+        print("Найкоротше слово у списку:", shortest_word)
+    else:
+        print("Список слів порожній.")
+
+# Виклик функції
+find_shortest_word()
